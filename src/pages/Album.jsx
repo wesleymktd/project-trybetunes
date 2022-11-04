@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Header from '../components/Header';
 
 class Album extends Component {
   render() {
@@ -11,6 +12,7 @@ class Album extends Component {
 
     return (
       <div data-testid="page-album">
+        <Header />
         { `${album} ${id}` }
       </div>
     );
