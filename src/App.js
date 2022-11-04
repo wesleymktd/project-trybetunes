@@ -10,17 +10,14 @@ import ProfileEdit from './pages/ProfileEdit';
 
 class App extends React.Component {
   render() {
+    // const { nameLogin, isButtonDisabled } = this.state;
     return (
       <section>
         <p>TrybeTunes</p>
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route exact path="/search" component={ Search } />
-          <Route
-            exact
-            path="/album/:id"
-            render={ (props) => <Album { ...props } album="album" /> }
-          />
+          <Route exact path="/album/:id" component={ Album } />
           <Route exact path="/favorites" component={ Favorites } />
           <Route exact path="/profile" component={ Profile } />
           <Route exact path="/profile/edit" component={ ProfileEdit } />
