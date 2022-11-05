@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import FoundSearch from '../components/FoundSearch';
 import Header from '../components/Header';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import Loading from './Loading';
 
 export default class Search extends Component {
   state = {
     searchName: '',
+    artistName: '',
     isButtonDisabled: true,
+    hideLoading: false,
+    foundResult: false,
+    searchInit: false,
+    resultSearch: [],
   };
 
   validateButton = () => {
@@ -23,8 +31,33 @@ export default class Search extends Component {
     }, this.validateButton);
   };
 
+  fetchMusic = (searchName) => {
+    this.setState({
+      hideLoading: true,
+      searchName: '',
+    }, async () => {
+      const result = await searchAlbumsAPI(searchName);
+      this.setState({
+        hideLoading: false,
+        resultSearch: result,
+        foundResult: !!result.length,
+        searchInit: true,
+        artistName: searchName,
+      });
+    });
+  };
+
   render() {
-    const { searchName, isButtonDisabled } = this.state;
+    const {
+      searchName,
+      artistName,
+      isButtonDisabled,
+      hideLoading,
+      resultSearch,
+      foundResult,
+      searchInit,
+    } = this.state;
+
     return (
       <>
         <div data-testid="page-search">
@@ -43,10 +76,29 @@ export default class Search extends Component {
             type="button"
             data-testid="search-artist-button"
             disabled={ isButtonDisabled }
+            onClick={ () => this.fetchMusic(searchName) }
           >
             Pesquisar
           </button>
         </div>
+        {searchInit && (
+          <>
+            <h1>
+              {!foundResult && 'Nenhum álbum foi encontrado'}
+            </h1>
+            <ul>
+              {hideLoading ? <Loading />
+                : (
+                  <>
+                    {foundResult && `Resultado de álbuns de: ${artistName}`}
+                    {resultSearch.map((results) => (
+                      <FoundSearch { ...results } key={ results.collectionName } />
+                    ))}
+                  </>
+                )}
+            </ul>
+          </>
+        )}
       </>
     );
   }
