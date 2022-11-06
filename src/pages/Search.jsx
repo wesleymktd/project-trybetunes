@@ -40,7 +40,7 @@ export default class Search extends Component {
       this.setState({
         hideLoading: false,
         resultSearch: result,
-        foundResult: !!result.length,
+        foundResult: result.length,
         searchInit: true,
         artistName: searchName,
       });

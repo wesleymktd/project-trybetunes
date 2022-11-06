@@ -22,7 +22,7 @@ class FoundSearch extends Component {
         <p>{collectionId}</p>
         <p>{collectionName}</p>
         <p>{collectionPrice}</p>
-        <p>{artworkUrl100}</p>
+        <img src={ artworkUrl100 } alt={ artistName } />
         <p>{releaseDate}</p>
         <p>{trackCount}</p>
         <Link
