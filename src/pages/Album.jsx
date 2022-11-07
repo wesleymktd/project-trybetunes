@@ -18,6 +18,7 @@ class Album extends Component {
         params: { id },
       } } = this.props;
     const [listAlbum, ...listMusic] = await getMusics(id);
+    console.log(listMusic);
     this.setState({
       listAlbum,
       listMusic,
@@ -41,6 +42,8 @@ class Album extends Component {
           {listMusic.map((music) => (
             <MusicCard
               music={ music }
+              trackName={ music.trackName }
+              previewUrl={ music.previewUrl }
               trackId={ music.trackId }
               key={ music.trackId }
             />
