@@ -1,13 +1,19 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+## 🧐 Sobre
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+<h4 align="left"> 
+	O objetivo do projeto é desenvolver uma aplicação onde a pessoa usuária digite seu álbum preferido, onde é renderizado na tela as informações daquele álbum, sendo possível também ouvir um trecho das músicas, além disso as informações são exibidas através de uma requisição API.
+</h4>
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## ⚒ Instalando <a name = "installing"></a>
+
+```bash
+# Clone o projeto
+$ git clone git@github.com:git@github.com:wesleymktd/project-trybetunes.git
+# Acesse
+$ cd ./project-trybetunes
+# Instale as dependencias
+$ npm install
+# Inicie o projeto
+$ npm start
+# O servidor vai inicar na porta <http://localhost:3000>
+```
