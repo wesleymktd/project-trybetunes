@@ -1,18 +1,18 @@
 ## 🧐 Sobre
 
-<h4 align="left"> 
+<p align="left"> 
 	Trybetunes é um aplicativo capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil do usuário logado. Com esta aplicação o usuário será capaz de:
 
-Logar-se;
-Procure por uma banda ou artista;
-Listar os álbuns disponíveis desta banda ou artista;
-Visualizar músicas em um álbum selecionado;
-Reproduzir uma prévia das músicas deste álbum;
-Músicas favoritas e não favoritas;
-Vizualizar a lista de músicas favoritas;
-Visualizar o perfil da pessoa logada;
-Editar o perfil da pessoa conectada;
-</h4>
+- Logar-se;
+- Procure por uma banda ou artista;
+- Listar os álbuns disponíveis desta banda ou artista;
+- Visualizar músicas em um álbum selecionado;
+- Reproduzir uma prévia das músicas deste álbum;
+- Músicas favoritas e não favoritas;
+- Vizualizar a lista de músicas favoritas;
+- Visualizar o perfil da pessoa logada;
+- Editar o perfil da pessoa conectada;
+</p>
 
 ## ⚒ Instalando <a name = "installing"></a>
 
