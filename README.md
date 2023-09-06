@@ -14,6 +14,12 @@
 - Editar o perfil da pessoa conectada;
 </p>
 
+<div align="center" display="inline">
+<img src="./src/img/my-login.png" alt="login" width="400px" height="250px">
+<img src="./src/img/my-search-music.png" alt="wallet" width="400px" height="250px">
+<img src="./src/img/my-album.png" alt="login" width="400px">
+</div>
+
 ## ⚒ Instalando <a name = "installing"></a>
 
 ```bash
