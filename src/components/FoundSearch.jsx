@@ -16,17 +16,18 @@ class FoundSearch extends Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="album-search">
         <p>{artistId}</p>
-        <p>{artistName}</p>
         <p>{collectionId}</p>
-        <p>{collectionName}</p>
+        <h3 className="h3-search">{collectionName}</h3>
+        <p className="artist-search">{artistName}</p>
         <p>{collectionPrice}</p>
-        <img src={ artworkUrl100 } alt={ artistName } />
+        <img className="img-search" src={ artworkUrl100 } alt={ artistName } />
         <p>{releaseDate}</p>
         <p>{trackCount}</p>
         <Link
           to={ `/album/${collectionId}` }
+          className="link-search"
           data-testid={ `link-to-album-${collectionId}` }
         >
           Coleção

@@ -13,7 +13,6 @@ class App extends React.Component {
     // const { nameLogin, isButtonDisabled } = this.state;
     return (
       <section>
-        <p>TrybeTunes</p>
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route exact path="/search" component={ Search } />

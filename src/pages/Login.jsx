@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import logo from '../img/logo.png';
+import '../css/login.css';
 
 class Login extends Component {
   state = {
@@ -46,26 +48,31 @@ class Login extends Component {
     return (
       <section>
         {charge && <Loading />}
-        <div data-testid="page-login">
-          <form action="">
-            <input
-              data-testid="login-name-input"
-              type="text"
-              placeholder="Digite seu nome aqui"
-              value={ nameLogin }
-              name="nameLogin"
-              onChange={ this.inputForm }
-            />
+        <div data-testid="page-login" className="container-background-login">
+          <div className="container">
+            <img src={ logo } alt="logo" className="logo-login" />
+            <form action="" className="form">
+              <input
+                className="input"
+                data-testid="login-name-input"
+                type="text"
+                placeholder="Digite seu nome aqui"
+                value={ nameLogin }
+                name="nameLogin"
+                onChange={ this.inputForm }
+              />
 
-            <button
-              data-testid="login-submit-button"
-              type="button"
-              disabled={ isButtonDisabled }
-              onClick={ this.userInfo }
-            >
-              Entrar
-            </button>
-          </form>
+              <button
+                className="button"
+                data-testid="login-submit-button"
+                type="button"
+                disabled={ isButtonDisabled }
+                onClick={ this.userInfo }
+              >
+                Entrar
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     );

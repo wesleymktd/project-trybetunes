@@ -3,6 +3,7 @@ import FoundSearch from '../components/FoundSearch';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
+import '../css/search.css';
 
 export default class Search extends Component {
   state = {
@@ -59,47 +60,49 @@ export default class Search extends Component {
     } = this.state;
 
     return (
-      <>
-        <div data-testid="page-search">
-          <Header />
-        </div>
-        <div>
-          <input
-            type="text"
-            data-testid="search-artist-input"
-            placeholder="Nome do Artista"
-            name="searchName"
-            value={ searchName }
-            onChange={ this.handleForm }
-          />
-          <button
-            type="button"
-            data-testid="search-artist-button"
-            disabled={ isButtonDisabled }
-            onClick={ () => this.fetchMusic(searchName) }
-          >
-            Pesquisar
-          </button>
-        </div>
+      <div data-testid="page-search" className="box-search">
+        <Header />
+        <form action="" className="container-search">
+          <div className="form-search">
+            <input
+              type="text"
+              data-testid="search-artist-input"
+              placeholder="Nome do Artista"
+              name="searchName"
+              className="search-input"
+              value={ searchName }
+              onChange={ this.handleForm }
+            />
+            <button
+              type="button"
+              data-testid="search-artist-button"
+              className="search-button"
+              disabled={ isButtonDisabled }
+              onClick={ () => this.fetchMusic(searchName) }
+            >
+              Pesquisar
+            </button>
+          </div>
+        </form>
         {searchInit && (
           <>
             <h1>
               {!foundResult && 'Nenhum álbum foi encontrado'}
             </h1>
-            <ul>
-              {hideLoading ? <Loading />
-                : (
-                  <>
-                    {foundResult && `Resultado de álbuns de: ${artistName}`}
+            {hideLoading ? <Loading />
+              : (
+                <div>
+                  {foundResult && `Resultado de álbuns de: ${artistName}`}
+                  <div className="container-album">
                     {resultSearch.map((results) => (
                       <FoundSearch { ...results } key={ results.collectionName } />
                     ))}
-                  </>
-                )}
-            </ul>
+                  </div>
+                </div>
+              )}
           </>
         )}
-      </>
+      </div>
     );
   }
 }

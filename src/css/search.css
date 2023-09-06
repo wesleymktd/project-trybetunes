@@ -1,0 +1,146 @@
+.container-search {
+  background-color: white;
+  box-shadow: 0 0 4px rgba(172, 181, 200, 0.938);
+  display: flex;
+  height: 200px;
+  position: absolute;
+  width: 100vw;
+}
+
+.container-album {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 40px;
+  margin-top: 270px;
+}
+
+.img-search {
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(172, 181, 200, 0.938);
+  height: 200px;
+}
+
+.album-search {
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.box-search {
+  display: flex;
+}
+
+.form-search {
+  display: flex;
+  gap: 10px;
+  left: 40%;
+  position: absolute;
+  top: 97px;
+}
+
+.title-search {
+  color: #003be5;
+  display: block;
+  font-style: italic;
+  left: 490px;
+  margin-left: 100px;
+  position: absolute;
+  top: 200px;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 23px;
+  height: 40px;
+  text-align: center;
+  width: 400px;
+}
+
+.search-input::placeholder {
+  color: gray;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 14px;
+  text-align: center;
+
+  /* text-transform: uppercase; */
+}
+
+.search-button {
+  background: #00d5e2;
+  border-radius: 23px;
+  height: 40px;
+  width: 114px;
+}
+
+.h3-search {
+  color: #3d495c;
+  font-size: 12.07px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.artist-search {
+  color: #3d495c;
+  font-size: 10.052px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@media screen and ( max-width : 850px ) {
+
+  .form-search {
+    left: 200px;
+  }
+}
+
+@media screen and ( max-width : 720px ) {
+
+  .form-search {
+    left: 10px;
+  }
+
+  .search-input {
+    height: 32px;
+    margin-left: 40px;
+    margin-top: 8px;
+    width: 300px;
+  }
+
+  .search-button {
+    height: 35px;
+    margin-left: -220px;
+    margin-top: 50px;
+  }
+
+  .container-search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-search {
+    flex-direction: column;
+  }
+
+  .title-search {
+    display: flex;
+    font-size: 16px;
+    margin-left: -420px;
+  }
+
+  .container-album {
+    margin-left: 80px;
+  }
+
+  /* .search-input {
+      height: 20px;
+      width: 154px;
+    } */
+}
